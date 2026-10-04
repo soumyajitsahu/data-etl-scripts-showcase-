@@ -158,7 +158,7 @@ time.sleep(10)
 
 #Data push into permanent table
 
-# credentials = service_account.Credentials.from_service_account_file('/home/siddharth/Downloads/service_account.json')
+# credentials = service_account.Credentials.from_service_account_file('/home/soumyajits/Downloads/service_account.json')
 bq_client = bigquery.Client(credentials=credentials,project=project_id)
 
 source_table = 'gonukkad.temp_Live_Merchants'

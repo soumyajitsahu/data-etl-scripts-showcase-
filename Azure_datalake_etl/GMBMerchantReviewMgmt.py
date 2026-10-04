@@ -69,7 +69,7 @@ with open(csv_file_path, mode='w', newline='') as csv_file:
         cleaned_row = {key: convert_boolean(value) if isinstance(value, bool) else value for key, value in row.items()}
         writer.writerow(cleaned_row)
 
-# directory_path = '/home/siddharth/Documents/GoNukkad/GMBMerchantReviewMgmt/'+yesterday_filename
+# directory_path = '/home/soumyajits/Documents/GoNukkad/GMBMerchantReviewMgmt/'+yesterday_filename
 
 storage_client = storage.Client.from_service_account_json(
     'path_to_service_account.json')

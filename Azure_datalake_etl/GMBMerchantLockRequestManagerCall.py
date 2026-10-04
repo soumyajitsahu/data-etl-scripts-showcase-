@@ -54,7 +54,7 @@ today_filename = today.strftime("%Y-%m-%d")+".csv"
 yesterday_filename = 'GMBMerchantLockRequestManagerCall_'+yesterday.strftime("%Y-%m-%d")+".csv"
 rows = mysqlconnect()
 csv_file_path = new_directory+'/'+yesterday_filename
-##csv_file_path = '/home/siddharth/Downloads/'+yesterday_filename
+##csv_file_path = '/home/soumyajits/Downloads/'+yesterday_filename
 fieldnames = list(rows[0].keys())
 # fieldnames = ['PK_GMBMerchantLockRequestManagerCallID','MerchantID','RequestManagerNo','Type','CreatedDateTime']
 with open(csv_file_path, mode='w', newline='') as csv_file:

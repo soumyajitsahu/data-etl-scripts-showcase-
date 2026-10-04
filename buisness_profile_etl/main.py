@@ -172,7 +172,7 @@ endpoint_9 = '?readMask=serviceItems'
 base_url10 = 'https://mybusiness.googleapis.com/v4/'
 endpoint_10 = 'localPosts'
 
-parent_dir = "/home/siddharth/Documents/GoNukkad/gmb_mec_token_api/responses"
+parent_dir = "/home/soumyajits/Documents/GoNukkad/gmb_mec_token_api/responses"
 
 new_directory = os.path.join(parent_dir, f'{date.today()}')
 
@@ -458,7 +458,7 @@ def extract_address(data):
 #creating csv file to write
 insight_csv_file = f'MEC_insights_{date.today()}_{Insight_Date}.csv'
 # account_csv_file = 'test_190241.csv'
-directory_path = '/home/siddharth/Documents/GoNukkad/gmb_mec_token_api/insights'
+directory_path = '/home/soumyajits/Documents/GoNukkad/gmb_mec_token_api/insights'
 insight_csv_file_path = os.path.join(directory_path,insight_csv_file)
 
 #list of refresh Tokens
@@ -726,7 +726,7 @@ def upload_to_bucket(blob_name, file_path, bucket_name):
 
     if input_row_count == output_row_count:
 
-        storage_client = storage.Client.from_service_account_json('/home/siddharth/Downloads/service_account.json')
+        storage_client = storage.Client.from_service_account_json('/home/soumyajits/Downloads/service_account.json')
 
         bucket=storage_client.get_bucket(bucket_name)
         print("destination bucket is: ", bucket)
@@ -740,7 +740,7 @@ def upload_to_bucket(blob_name, file_path, bucket_name):
     else:
         print("sorry, insight report can't be ingested due to records mismatch. Please check input and output record counts.")
 
-        logging_client = logging.Client.from_service_account_json('/home/siddharth/Downloads/service_account.json')
+        logging_client = logging.Client.from_service_account_json('/home/soumyajits/Downloads/service_account.json')
         logger = logging_client.logger('GMB-API-Data-Ingestion')
         logger.log_text('GMB API Data ingestion failed')
 
@@ -764,7 +764,7 @@ upload_to_bucket('GMB_API/'+insight_csv_file,insight_csv_file_path,'gonukkad')
 #     with smtplib.SMTP('smtp.example.com', 587) as smtp:
 #         smtp.ehlo()  # Identify yourself to the SMTP server
 #         smtp.starttls()  # Enable TLS encryption
-#         smtp.login('siddharth.chandel@vacobinary.in', 'xxxx')  # Login to your email account
+#         smtp.login('soumyajits.chandel@vacobinary.in', 'xxxx')  # Login to your email account
 #         smtp.send_message(msg)  # Send the email
 #
 # if ingestion_status != 200:
